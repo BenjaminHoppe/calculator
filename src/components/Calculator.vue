@@ -104,20 +104,22 @@ export default {
   grid-column: 1/5;
   background-color: #212121;
   color: white;
-
 }
 
 .zero {
   grid-column: 1/3;
+  cursor: pointer;
 }
 
 .btn {
   background-color: #f2f2f2;
   border: 1px solid #999;
+  cursor: pointer;
 }
 
 .operator {
   background-color: #FF9F0C;
   color: white;
+  cursor: pointer;
 }
 </style>
