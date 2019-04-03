@@ -28,6 +28,8 @@ export default {
   data() {
     return {
       current: '',
+      operator: null,
+
     }
   },
   methods: {
@@ -47,21 +49,20 @@ export default {
     dot() {
       if(this.current.indexOf('.') === -1) {
         this.append('.');
+      }
     },
     divide() {
-
+      this.operator = (a, b) => a / b;
     },
     times() {
-
+      this.operator = (a, b) => a * b;
     },
     minus() {
-
+      this.operator = (a, b) => a - b;
     },
     add() {
-
+      this.operator = (a, b) => a + b;
     },
-
-    }
   }
 }
 </script>
