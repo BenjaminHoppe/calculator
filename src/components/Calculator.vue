@@ -2,7 +2,7 @@
   <div class="calculator">
     <div class="display">{{ current || '0' }}</div>
     <div @click="clear" class="btn">c</div>
-    <div @click="sign" class="btn">+/-</div>
+    <div @click="del" class="btn">del</div>
     <div @click="percent" class="btn">%</div>
     <div @click="divide" class="btn operator">÷</div>
     <div @click="append('7')" class="btn">7</div>
@@ -17,7 +17,8 @@
     <div @click="append('2')" class="btn">2</div>
     <div @click="append('3')" class="btn">3</div>
     <div @click="add"class="btn operator">+</div>
-    <div @click="append('0')" class="btn zero">0</div>
+    <div @click="append('0')" class="btn">0</div>
+    <div @click="sign" class="btn">+/-</div>
     <div @click="dot" class="btn">.</div>
     <div @click="equal" class="btn operator">=</div>
   </div>
@@ -61,6 +62,9 @@ export default {
     setPrevious() {
       this.previous = this.current;
       this.operatorClicked = true;
+    },
+    del() {
+      this.current = this.current.slice(0, -1);
     },
     divide() {
       this.operator = (a, b) => a / b;
@@ -109,9 +113,9 @@ export default {
   padding-right: 15px;
 }
 
-.zero {
+/* .zero {
   grid-column: 1/3;
-}
+} */
 
 .btn {
   background-color: #303B4B;
