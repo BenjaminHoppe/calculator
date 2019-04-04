@@ -31,7 +31,7 @@ export default {
       current: '',
       operator: null,
       operatorClicked: false,
-
+      isActive: false
     }
   },
   methods: {
