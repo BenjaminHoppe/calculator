@@ -91,6 +91,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -102,24 +103,38 @@ export default {
 
 .display {
   grid-column: 1/5;
-  background-color: #212121;
+  background-color: #2B3848;
   color: white;
+  text-align: right;
+  padding-right: 15px;
 }
 
 .zero {
   grid-column: 1/3;
-  cursor: pointer;
 }
 
 .btn {
-  background-color: #f2f2f2;
-  border: 1px solid #999;
-  cursor: pointer;
+  background-color: #303B4B;
+  border: 1px solid #222831;
+  color: white;
 }
 
 .operator {
-  background-color: #FF9F0C;
-  color: white;
-  cursor: pointer;
+  background-color: #263342;
+  color: #3ADBC4;
 }
+
+.zero, .btn, .operator {
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.zero:hover, .btn:hover, .operator:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+
 </style>
