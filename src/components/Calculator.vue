@@ -133,12 +133,17 @@ export default {
   text-align: center;
   transition: opacity 0.3s;
   opacity: 1;
+  font-family: 'code_demolight';
+  font-family: 'Montserrat', sans-serif;
 }
 
 .zero:hover, .btn:hover, .operator:hover {
   opacity: 0.5;
   transition: opacity 0.3s;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
 
 
 </style>
