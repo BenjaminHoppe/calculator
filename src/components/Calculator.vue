@@ -1,6 +1,6 @@
 <template>
   <div class="calculator">
-    <div @keyup.enter="equal()"class="display">{{ current || '0' }}</div>
+    <div class="display">{{ current || '0' }}</div>
     <div @click="clear" class="btn">c</div>
     <div @click="del" class="btn">del</div>
     <div @click="percent" class="btn">%</div>
