@@ -29,13 +29,16 @@ export default {
 h1 {
   text-align: center;
   font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: #3ADBC4;
   transition: opacity 0.3s;
@@ -45,7 +48,7 @@ a {
 p > a:hover {
   transition: opacity 0.3s;
   opacity: 0.5;
-
-
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
 </style>

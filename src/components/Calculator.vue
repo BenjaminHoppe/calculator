@@ -111,6 +111,7 @@ export default {
   color: white;
   text-align: right;
   padding-right: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* .zero {
@@ -133,7 +134,6 @@ export default {
   text-align: center;
   transition: opacity 0.3s;
   opacity: 1;
-  font-family: 'code_demolight';
   font-family: 'Montserrat', sans-serif;
 }
 
