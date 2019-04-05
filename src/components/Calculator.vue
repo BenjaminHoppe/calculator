@@ -102,7 +102,7 @@ export default {
   grid-auto-rows: minmax(50px auto);
   font-size: 40px;
   width: 400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .display {
