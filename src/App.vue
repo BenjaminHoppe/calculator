@@ -55,5 +55,12 @@ p > a:hover {
   opacity: 0.5;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200');
 </style>

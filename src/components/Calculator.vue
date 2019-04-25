@@ -142,6 +142,14 @@ export default {
   transition: opacity 0.3s;
 }
 
+@media only screen and (max-width: 600px) {
+  .calculator {
+    width: 300px;
+  }
+
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200');
 
 
