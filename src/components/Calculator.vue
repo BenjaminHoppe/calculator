@@ -91,20 +91,10 @@ export default {
         parseFloat(this.previous)
       )}`;
       this.previous = null;
-      this.current = `${
-        this.operator(
-          parseFloat(this.current),
-          parseFloat(this.previous)
-        ).toString().length >= 5
-        ? this.operator(
-          parseFloat(this.current),
-          parseFloat(this.previous)
-        ).toExponential(5)
-        : this.operator(parseFloat(this.current), parseFloat(this.previous))
-      }`
+      
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
