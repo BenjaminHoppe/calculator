@@ -133,7 +133,7 @@ export default {
 }
 
 .operator:active {
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }
 
 .zero, .btn, .operator {
