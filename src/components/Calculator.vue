@@ -148,7 +148,6 @@ export default {
 
   .zero:hover, .btn:hover, .operator:hover {
     opacity: 1;
-    transition: opacity 0.4s;
   }
 
 }
