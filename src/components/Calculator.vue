@@ -4,19 +4,19 @@
     <div @click="clear" class="btn">c</div>
     <div @click="del" class="btn">del</div>
     <div @click="percent" class="btn">%</div>
-    <div @click="divide" class="btn operator">÷</div>
+    <div @click="divide" class="btn numOperator">÷</div>
     <div @click="append('7')" class="btn">7</div>
     <div @click="append('8')" class="btn">8</div>
     <div @click="append('9')" class="btn">9</div>
-    <div @click="times" class="btn operator">x</div>
+    <div @click="times" class="btn numOperator">x</div>
     <div @click="append('4')" class="btn">4</div>
     <div @click="append('5')" class="btn">5</div>
     <div @click="append('6')" class="btn">6</div>
-    <div @click="subtract" class="btn operator">-</div>
+    <div @click="subtract" class="btn numOperator">-</div>
     <div @click="append('1')" class="btn">1</div>
     <div @click="append('2')" class="btn">2</div>
     <div @click="append('3')" class="btn">3</div>
-    <div @click="add" class="btn operator">+</div>
+    <div @click="add" class="btn numOperator">+</div>
     <div @click="append('0')" class="btn">0</div>
     <div @click="sign" class="btn">+/-</div>
     <div @click="dot" class="btn">.</div>
@@ -117,22 +117,18 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* .zero {
-  grid-column: 1/3;
-} */
-
 .btn {
   background-color: #303B4B;
   border: 1px solid #222831;
   color: white;
 }
 
-.operator {
+.operator, .numOperator {
   background-color: #263342;
   color: #3ADBC4;
 }
 
-.operator:active {
+.numOperator:active {
   opacity: 0.5 !important;
 }
 
