@@ -51,7 +51,6 @@ export default {
       if (this.operatorClicked) {
         this.current = '';
         this.operatorClicked = false;
-
       }
       this.current = `${this.current}${number}`;
     },
@@ -62,37 +61,44 @@ export default {
     },
     setPrevious() {
       this.previous = this.current;
+      this.current = null;
       this.operatorClicked = true;
     },
     del() {
       this.current = this.current.slice(0, -1);
     },
     divide() {
+     this.equal();
      this.operator = (a, b) => a / b;
      this.setPrevious();
     },
     times() {
+      this.equal();
       this.operator = (a, b) => a * b;
       this.setPrevious();
     },
     subtract() {
+      this.equal();
       this.operator = (a, b) => a - b;
       this.setPrevious();
       console.log(this.operator);
     },
     add() {
+      this.equal();
       this.operator = (a, b) => a + b;
       this.setPrevious();
       console.log(this.operator);
     },
     equal() {
-      this.current = `${this.operator(
-        parseFloat(this.previous),
-        parseFloat(this.current)
-      ).toFixed(5)
-      }`;
-
-      this.previous = null;
+      if(this.current === null || this.previous === null)
+      return; {
+        this.current = `${this.operator(
+          parseFloat(this.previous),
+          parseFloat(this.current)
+        ).toFixed(2)
+        }`;
+        this.previous = null;
+      }
     }
   }
 };
