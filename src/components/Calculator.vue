@@ -108,10 +108,6 @@ export default {
   /* margin: 0 auto; */
 }
 
-.calculator > div:active {
-  opacity: 0.5;
-}
-
 .display {
   grid-column: 1/5;
   background-color: #2B3848;
@@ -136,6 +132,10 @@ export default {
   color: #3ADBC4;
 }
 
+.operator:active {
+  opacity: 0.5;
+}
+
 .zero, .btn, .operator {
   cursor: pointer;
   text-align: center;
@@ -144,10 +144,10 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* .zero:hover, .btn:hover, .operator:hover {
+.zero:hover, .btn:hover, .operator:hover {
   opacity: 0.5;
   transition: opacity 0.4s;
-} */
+}
 
 @media only screen and (max-width: 600px) {
   .calculator {
