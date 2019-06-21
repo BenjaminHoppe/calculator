@@ -121,6 +121,12 @@ export default {
   background-color: #303B4B;
   border: 1px solid #222831;
   color: white;
+  transition: transform 0.3s;
+}
+
+.btn:active {
+   transform: scale(0.95);
+    transition: transform 0.3s;
 }
 
 .operator {
