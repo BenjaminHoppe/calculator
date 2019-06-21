@@ -89,7 +89,9 @@ export default {
       this.current = `${this.operator(
         parseFloat(this.previous),
         parseFloat(this.current)
-      )}`;
+      ).toFixed(5)
+      }`;
+
       this.previous = null;
     }
   }
