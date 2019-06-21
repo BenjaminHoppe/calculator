@@ -12,11 +12,11 @@
     <div @click="append('4')" class="btn">4</div>
     <div @click="append('5')" class="btn">5</div>
     <div @click="append('6')" class="btn">6</div>
-    <div @click="minus" class="btn operator">-</div>
+    <div @click="subtract" class="btn operator">-</div>
     <div @click="append('1')" class="btn">1</div>
     <div @click="append('2')" class="btn">2</div>
     <div @click="append('3')" class="btn">3</div>
-    <div @click="add"class="btn operator">+</div>
+    <div @click="add" class="btn operator">+</div>
     <div @click="append('0')" class="btn">0</div>
     <div @click="sign" class="btn">+/-</div>
     <div @click="dot" class="btn">.</div>
@@ -33,11 +33,12 @@ export default {
       operator: null,
       operatorClicked: false,
       isActive: false
-    }
+    };
   },
   methods: {
     clear() {
       this.current = '';
+      this.previous = null;
     },
     sign() {
       this.current = this.current.charAt(0) === '-' ?
@@ -67,20 +68,22 @@ export default {
       this.current = this.current.slice(0, -1);
     },
     divide() {
-      this.operator = (a, b) => a / b;
-      this.setPrevious();
+     this.operator = (a, b) => a / b;
+     this.setPrevious();
     },
     times() {
       this.operator = (a, b) => a * b;
       this.setPrevious();
     },
-    minus() {
-      this.operator = (a, b) => a - b;
+    subtract() {
+      this.operator = (a, b) => b - a;
       this.setPrevious();
+      console.log(this.operator);
     },
     add() {
       this.operator = (a, b) => a + b;
       this.setPrevious();
+      console.log(this.operator);
     },
     equal() {
       this.current = `${this.operator(
@@ -88,6 +91,17 @@ export default {
         parseFloat(this.previous)
       )}`;
       this.previous = null;
+      this.current = `${
+        this.operator(
+          parseFloat(this.current),
+          parseFloat(this.previous)
+        ).toString().length >= 5
+        ? this.operator(
+          parseFloat(this.current),
+          parseFloat(this.previous)
+        ).toExponential(5)
+        : this.operator(parseFloat(this.current), parseFloat(this.previous))
+      }`
     }
   }
 }
