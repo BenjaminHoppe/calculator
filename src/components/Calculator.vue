@@ -76,7 +76,7 @@ export default {
       this.setPrevious();
     },
     subtract() {
-      this.operator = (a, b) => b - a;
+      this.operator = (a, b) => a - b;
       this.setPrevious();
       console.log(this.operator);
     },
@@ -87,11 +87,10 @@ export default {
     },
     equal() {
       this.current = `${this.operator(
-        parseFloat(this.current),
-        parseFloat(this.previous)
+        parseFloat(this.previous),
+        parseFloat(this.current)
       )}`;
       this.previous = null;
-      
     }
   }
 };
